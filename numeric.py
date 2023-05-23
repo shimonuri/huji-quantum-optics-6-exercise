@@ -11,12 +11,12 @@ class Result(enum.Enum):
 
 
 def plot_g2_vs_rate():
-    rates = np.linspace(0.1, 1.3 / 9.4e-9, 10)
+    rates = np.linspace(0.1, 1.3 / 9.4e-9, 100)
     g2s = [get_g2(rate, 9.4e-9) for rate in rates]
     plt.plot(rates * 9.4e-9, g2s, label="Numeric")
 
 
-def get_g2(rate, window, number_of_repetitions=100000):
+def get_g2(rate, window, number_of_repetitions=10 ** 5):
     results = [make_experiment(rate, window) for _ in range(number_of_repetitions)]
     coincidences = results.count(Result.COINCIDENCE)
     left_only = results.count(Result.LEFT_ONLY) + coincidences
