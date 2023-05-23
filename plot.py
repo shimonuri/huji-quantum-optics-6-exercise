@@ -17,7 +17,7 @@ def plot_theoretical_data():
     theoretical_g = lambda x: (x * (x + 2)) / ((1 + x) ** 2)
     x = np.linspace(0, 1.3, 100)
     y = [theoretical_g(i) for i in x]
-    plt.plot(x, y, label="Theoretical")
+    plt.plot(x, y, label="Theoretical ($Nw(Nw+2)/(1+Nw)^2$))")
 
 
 if __name__ == "__main__":
