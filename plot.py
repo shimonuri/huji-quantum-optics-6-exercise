@@ -2,6 +2,9 @@ import numpy as np
 import pandas
 import matplotlib.pyplot as plt
 
+import numeric
+
+
 plt.rcParams.update({"font.size": 22})
 
 
@@ -23,5 +26,6 @@ def plot_theoretical_data():
 if __name__ == "__main__":
     plot_experimental_data("data/Exercise 6 Data.csv")
     plot_theoretical_data()
+    numeric.plot_g2_vs_rate()
     plt.legend()
     plt.show()
