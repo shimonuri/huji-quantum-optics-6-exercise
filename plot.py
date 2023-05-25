@@ -26,6 +26,6 @@ def plot_theoretical_data():
 if __name__ == "__main__":
     plot_experimental_data("data/Exercise 6 Data.csv")
     plot_theoretical_data()
-    numeric.plot_g2_vs_rate()
+    numeric.plot_g2_vs_rate(numeric.Method.COUNT)
     plt.legend()
     plt.show()

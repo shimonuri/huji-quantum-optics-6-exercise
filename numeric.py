@@ -17,7 +17,7 @@ class Method(enum.Enum):
 
 def plot_g2_vs_rate(method):
     rates = np.linspace(0.1, 1.3 / 9.4e-9, 100)
-    g2s = [get_g2(rate, 9.4e-9, method) for rate in rates]
+    g2s = [get_g2(rate, 9.4e-9, method=method) for rate in rates]
     plt.plot(rates * 9.4e-9, g2s, label="Numeric")
 
 
